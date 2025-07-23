@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Universe = () => {
+const Navber = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Universe = () => {
     );
 };
 
-export default Universe;
+export default Navber;
