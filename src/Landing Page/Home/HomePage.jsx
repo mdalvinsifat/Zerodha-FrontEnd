@@ -3,14 +3,16 @@ import Awards from './Awards';
 import Navber from '../Navber';
 import Hero from "./Hero"
 import State from "./State"
+import Pricing from './Pricing';
 
 const HomePage = () => {
     return (
         <div>
              
-             <Navber/>
+        
              <Hero/>
              <Awards/>
+             <Pricing/>
              <State/>
 
 
