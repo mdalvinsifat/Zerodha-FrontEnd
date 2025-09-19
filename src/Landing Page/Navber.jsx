@@ -21,31 +21,10 @@ export default function Navber() {
         <div className="hidden md:flex items-center gap-6">
           <NavLink to="/login" className="text-sm text-gray-700 hover:text-black transition">Signup</NavLink>
           <NavLink to="/about" className="text-sm text-gray-700 hover:text-black transition">About</NavLink>
+          <NavLink to="/product" className="text-sm text-gray-700 hover:text-black transition">Product </NavLink>
 
     
-          <div className="relative">
-            <button
-              onClick={() => setProductsOpen((s) => !s)}
-              onBlur={() => setTimeout(() => setProductsOpen(false), 150)}
-              className="inline-flex items-center gap-1 text-sm text-gray-700 hover:text-black transition"
-              aria-haspopup="true"
-              aria-expanded={productsOpen}
-            >
-              Products <HiChevronDown className={`transition ${productsOpen ? "rotate-180" : "rotate-0"}`} />
-            </button>
-
-            {productsOpen && (
-              <div
-                role="menu"
-                className="absolute right-0 mt-2 w-64 rounded-2xl border border-gray-200 bg-white shadow-lg p-2"
-              >
-               <NavLink  href="#kite" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Kite – Trading platform</NavLink>
-               <NavLink  href="#console" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Console – Backoffice</NavLink>
-               <NavLink  href="#coin" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Coin – Direct mutual funds</NavLink>
-               <NavLink  href="#varsity" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Varsity – Market education</NavLink>
-              </div>
-            )}
-          </div>
+     
 
           <NavLink to="/pricing" className="text-sm text-gray-700 hover:text-black transition">Pricing</NavLink>
           <NavLink to="/support" className="text-sm text-gray-700 hover:text-black transition">Support</NavLink>
@@ -73,19 +52,7 @@ export default function Navber() {
         <div className="px-4 sm:px-6 lg:px-8 py-3 space-y-1 bg-white">
           <NavLink to="/login" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Signup</NavLink>
           <NavLink to="/about" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">About</NavLink>
-
-          <details className="group">
-            <summary className="flex items-center justify-between cursor-pointer rounded-xl px-3 py-2 text-sm hover:bg-gray-50">
-              <span>Products</span>
-              <HiChevronDown className="transition group-open:rotate-180" />
-            </summary>
-            <div className="mt-1 ml-3 space-y-1">
-             <NavLink  to="/" className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-50">Kite – Trading platform</NavLink>
-             <NavLink  to="/" className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-50">Console – Backoffice</NavLink>
-             <NavLink to="/" className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-50">Coin – Direct mutual funds</NavLink>
-             <NavLink  to="/" className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-50">Varsity – Market education</NavLink>
-            </div>
-          </details>
+         <NavLink  to="/product" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Product</NavLink>
 
          <NavLink  to="/pricing" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Pricing</NavLink>
          <NavLink  to="/support" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Support</NavLink>
