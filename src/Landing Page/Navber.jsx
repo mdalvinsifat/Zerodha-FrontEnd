@@ -27,7 +27,7 @@ export default function Navber() {
      
 
           <NavLink to="/pricing" className="text-sm text-gray-700 hover:text-black transition">Pricing</NavLink>
-          <NavLink to="/support" className="text-sm text-gray-700 hover:text-black transition">Support</NavLink>
+          <NavLink to="/supported" className="text-sm text-gray-700 hover:text-black transition">Support</NavLink>
 
           <NavLink to="/login" className="ml-2 rounded-2xl border border-gray-300 px-4 py-1.5 text-sm text-gray-800 hover:bg-gray-50">Login</NavLink>
         </div>
@@ -55,7 +55,7 @@ export default function Navber() {
          <NavLink  to="/product" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Product</NavLink>
 
          <NavLink  to="/pricing" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Pricing</NavLink>
-         <NavLink  to="/support" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Support</NavLink>
+         <NavLink  to="/supported" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Support</NavLink>
          <NavLink  to="/login" className="block rounded-xl px-3 py-2 text-sm hover:bg-gray-50">Login</NavLink>
         </div>
       </div>
