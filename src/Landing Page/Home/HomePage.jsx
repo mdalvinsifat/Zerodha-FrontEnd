@@ -4,10 +4,11 @@ import Navber from '../Navber';
 import Hero from "./Hero"
 import State from "./State"
 import Pricing from './Pricing';
+import Layout from '../Layout';
 
 const HomePage = () => {
     return (
-        <div>
+        <Layout>
              
         
              <Hero/>
@@ -16,7 +17,7 @@ const HomePage = () => {
              <State/>
 
 
-        </div>
+        </Layout>
     );
 };
 

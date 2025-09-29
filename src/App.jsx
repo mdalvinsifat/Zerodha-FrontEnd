@@ -11,6 +11,14 @@ import ProductPage from './Landing Page/Products/ProductPage'
 import PriceingPage from './Landing Page/Pricing/PriceingPage'
 import NotFound from './Landing Page/NotFound'
 import SupportPageZerodha from './Landing Page/Support/SupportPageZerodha'
+import Summary from './Dashboard/Summary'
+import Orders from './Dashboard/Orders'
+import Holdings from './Dashboard/Holdings'
+import Positions from './Dashboard/Positions'
+import Funds from './Dashboard/Funds'
+import Apps from './Dashboard/Apps'
+import Home from './Dashboard/Home'
+import TopBar from './Dashboard/TopBar'
 
 
 function App() {
@@ -18,7 +26,7 @@ function App() {
   return (
     <>
 
-      <Navber />
+
 
       <Routes>
         <Route path='/' element={<HomePage/>}/>
@@ -28,8 +36,16 @@ function App() {
         <Route path='/supported' element={<SupportPageZerodha/>}/>
         <Route path='/pricing' element={<PriceingPage/>}/>
         <Route path='/login' element={<Sign/>}/>
-        <Route path='*' element={<NotFound/>}/>
-      </Routes>
+
+  </Routes>
+        {/* dashboard */}
+
+    <Routes>
+
+         <Route exact path="/*" element={<Home />} />
+        
+    </Routes>
+    
      <Footer/>
     </>
   )

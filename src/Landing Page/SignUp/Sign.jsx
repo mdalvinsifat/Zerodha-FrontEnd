@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Layout from '../Layout';
 
 const Sign = () => {
   const [activeTab, setActiveTab] = useState('individual');
@@ -12,7 +13,7 @@ const Sign = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <Layout className="min-h-screen bg-gray-50">
 
 
       {/* Main Content */}
@@ -186,7 +187,7 @@ const Sign = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </Layout>
   );
 };
 

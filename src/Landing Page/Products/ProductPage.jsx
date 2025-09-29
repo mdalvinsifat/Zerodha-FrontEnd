@@ -9,10 +9,11 @@ import imagesSix from "../../images/kiteconnect.png"
 import RightSection from './RightSection';
 import { HiArrowRight } from "react-icons/hi";
 import Universe from './Universe';
+import Layout from '../Layout';
 
 const ProductPage = () => {
     return (
-        <div>
+        <Layout>
            <Hero/> 
            <LeftSection  
            
@@ -85,7 +86,7 @@ const ProductPage = () => {
 <Universe/>
 
 
-        </div>
+        </Layout>
     );
 };
 

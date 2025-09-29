@@ -1,8 +1,9 @@
 import React from 'react';
 import image from "../../images/nithinKamath.jpg"
+import Layout from '../Layout';
 const AboutPage = () => {
     return (
-        <div>
+        <Layout>
 <div className='text-2xl font-semibold text-center p-5 mt-10 mb-10 w-280 m-auto border-b-1 '>
                 <h1>We pioneered the discount broking model in India. <br />
 Now, we are breaking ground with our technology.</h1>
@@ -79,7 +80,7 @@ Connect on <span className='text-blue-700'> Homepage / TradingQnA / Twitter  </s
 
 
 </div>
-        </div>
+        </Layout>
     );
 };
 
