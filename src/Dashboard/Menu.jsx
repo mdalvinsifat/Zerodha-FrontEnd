@@ -1,72 +1,101 @@
-import React from "react";
-import AdminLayout from "./AdminLayout";
+import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 const Menu = () => {
-  const handleProfileClick = () => {
-    
-    console.log("Profile clicked");
+  const [selectedMenu, setSelectedMenu] = useState(0);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+  const handleMenuClick = (index) => {
+    setSelectedMenu(index);
   };
 
+  const handleProfileClick = (index) => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
+  const menuClass = "menu";
+  const activeMenuClass = "menu selected";
+
   return (
-    <div className="w-full h-full flex items-center justify-between px-5 py-2 box-border">
-      {/* Logo */}
-      <img 
-        src="logo.png" 
-        alt="Logo" 
-        className="w-12 h-auto" 
-      />
-      
-      {/* Menus and Profile */}
-      <div className="flex items-center justify-evenly">
-        {/* Navigation Menu */}
-        <ul className="flex items-center list-none">
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Dashboard
-            </p>
+    <div className="menu-container">
+      <img src="logo.png" style={{ width: "50px" }} />
+      <div className="menus">
+        <ul>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/admin"
+              onClick={() => handleMenuClick(0)}
+            >
+              <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
+                Dashboard
+              </p>
+            </Link>
           </li>
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Orders
-            </p>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/orders"
+              onClick={() => handleMenuClick(1)}
+            >
+              <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>
+                Orders
+              </p>
+            </Link>
           </li>
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Holdings
-            </p>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/holdings"
+              onClick={() => handleMenuClick(2)}
+            >
+              <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>
+                Holdings
+              </p>
+            </Link>
           </li>
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Positions
-            </p>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/positions"
+              onClick={() => handleMenuClick(3)}
+            >
+              <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>
+                Positions
+              </p>
+            </Link>
           </li>
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Funds
-            </p>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/funds"
+              onClick={() => handleMenuClick(4)}
+            >
+              <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
+                Funds
+              </p>
+            </Link>
           </li>
-          <li className="mr-8">
-            <p className="text-sm font-normal text-gray-700 hover:text-orange-500 cursor-pointer transition-colors">
-              Apps
-            </p>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/apps"
+              onClick={() => handleMenuClick(6)}
+            >
+              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+                Apps
+              </p>
+            </Link>
           </li>
         </ul>
-        
-        {/* Divider */}
-        <hr className="border-l border-gray-200 h-8 mx-5" />
-        
-        {/* Profile Section */}
-        <div 
-          className="flex items-center justify-evenly ml-5 cursor-pointer hover:username:hover:text-orange-400"
-          onClick={handleProfileClick}
-        >
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-50 text-purple-300 text-xs font-normal mr-2">
-            ZU
-          </div>
-          <p className="text-sm font-light">USERID</p>
+        <hr />
+        <div className="profile" onClick={handleProfileClick}>
+          <div className="avatar">ZU</div>
+          <p className="username">USERID</p>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 
